@@ -1,7 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Fira+Mono&display=swap');
 
 * {
-    --panel-background: #373737;
+    --panel-background: #3b4252;
+    
     --panel-radius: 5px;
 
     font-family: 'Fira Mono', monospace;
@@ -19,7 +20,7 @@ body {
     bottom: 0px;
     top: 0px;
     position: absolute;
-    background-color: #272822;
+    background-color: #2e3440;
     color: white;
     font-family: sans-serif;
     --radius: 20px;
