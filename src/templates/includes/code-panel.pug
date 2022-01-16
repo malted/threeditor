@@ -1,0 +1,11 @@
+#code-panel
+	#bar(onMouseDown="onStartDragBar(this)")
+		span#drag-indicator(onMouseDown="onStartDragBar(this)")
+	#code-display-parent
+		.panel
+			.code-controls
+				input(type="button" value="Hide Boilerplate" onclick="onToggleBoilerplate(this)")
+				input(type="button" value="Show Imports" onclick="onToggleImports(this)")
+		#code-display
+			pre.line-numbers
+				code#code.language-javascript

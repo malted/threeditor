@@ -1,0 +1,23 @@
+/node_modules/
+package-lock.json
+.npm
+.DS_Store
+*.log
+/dist/
+.env
+.cache
+
+# Sass
+.sass-cache/
+*.css.map
+*.sass.map
+*.scss.map
+
+# Webstorm
+/.idea/
+
+# VSCode
+/.vscode/
+# Local History for VSCode
+.history/
+

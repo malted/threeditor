@@ -1,0 +1,25 @@
+.control-panel
+	.panel#grid-panel
+		input(type="color" onchange="onGridColorChange(this)")
+		input(type="button" onclick="onGridToggle(this)" value="Hide Grid")
+	.panel
+		select#primitives-dropdown
+		input(type="button" onclick="onAddShapeClick(this)" value="Add Shape")
+	.panel#object-control-panel
+		div
+			p#object-type Object Type
+			input(type="button" onclick="onDuplicateObject(this)" value="Duplicate")
+			input(type="button" onclick="onDeleteObject(this)" value="Delete")
+		div
+			input#object-name(onInput="onNameInput(this)" type="input" placeholder="Name")
+		for label in ["Position", "Rotation", "Scale"]
+			p.transform-label #{label} (x, y, z)
+			.transform
+				for axis in ["x", "y", "z"]
+					input.transform-input(type="number" step="0.1" placeholder=axis onInput="onTransformInputChange(this)")
+		div(style="display: flex; flex-direction: row; align-items: center;")
+			p.transform-label Material Color
+			input(type="color" onchange="onObjectMaterialColorChange(this)")
+		div(style="display: flex; flex-direction: row; align-items: center;")
+			p.transform-label Material Type
+			select#material-types-dropdown
