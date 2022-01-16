@@ -1,0 +1,48 @@
+@import  url(https://fonts.googleapis.com/css2?family=Fira+Mono&display=swap)
+
+$font-stack: "Fira Mono", monospace
+
+$panel-bg: #3b4252
+$panel-radius: 5px
+$panel-padding: 8px
+
+$codeview-bg: #2e3440
+$codeview-font-size: 10pt
+
+*
+	font-family: $font-stack
+
+body
+	overflow: hidden
+	user-select: none
+
+	padding: 0
+	margin: 0
+
+p
+	color: white
+	margin: 0
+	width: auto
+	white-space: nowrap
+
+.panel
+	position: relative
+
+	display: flex
+	flex-direction: row
+
+	width: fit-content
+
+	background-color: $panel-bg
+	border-radius: $panel-radius
+
+	padding: $panel-padding
+	gap: $panel-padding
+	margin: 15px
+
+.horizontal-rule
+	height: 0.5px
+	width: 100%
+
+	border-radius: $panel-radius
+	background-color: $codeview-bg

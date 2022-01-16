@@ -1,0 +1,43 @@
+@use "index"
+	
+.control-panel
+	position: absolute
+
+	#grid-panel
+		align-items: center
+
+	#object-control-panel
+		display: none
+		flex-direction: column
+
+		& > div:nth-child(1)
+			display: flex
+			gap: index.$panel-padding
+
+			&:nth-child(2)
+				margin-left: auto
+
+		& > div:not(:last-of-type)
+			padding-bottom: 3px
+
+		#object-name
+			text-overflow: ellipsis
+			width: auto
+		
+		.transform
+			input
+				width: 4rem
+
+				&:not(:last-child)
+					margin-right: 2px
+			
+		.transform-label
+			font-size: 0.8rem
+
+		.material-control
+			display: flex
+			flex-direction: row
+			align-items: center
+
+			& > :last-child
+				margin-left: auto

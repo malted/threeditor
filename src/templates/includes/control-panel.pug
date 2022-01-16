@@ -12,14 +12,16 @@
 			input(type="button" onclick="onDeleteObject(this)" value="Delete")
 		div
 			input#object-name(onInput="onNameInput(this)" type="input" placeholder="Name")
+		.horizontal-rule
 		for label in ["Position", "Rotation", "Scale"]
 			p.transform-label #{label} (x, y, z)
 			.transform
 				for axis in ["x", "y", "z"]
 					input.transform-input(type="number" step="0.1" placeholder=axis onInput="onTransformInputChange(this)")
-		div(style="display: flex; flex-direction: row; align-items: center;")
+		.horizontal-rule
+		.material-control
 			p.transform-label Material Color
 			input(type="color" onchange="onObjectMaterialColorChange(this)")
-		div(style="display: flex; flex-direction: row; align-items: center;")
+		.material-control
 			p.transform-label Material Type
 			select#material-types-dropdown

@@ -1,6 +1,8 @@
 //#region Imports
 
-import "../styles/style.css";
+import "../styles/code-view.sass";
+import "../styles/control-panel.sass";
+import "../styles/index.sass";
 
 import * as Utils from "./utils.js";
 
@@ -69,8 +71,6 @@ scene.add(grid);
 
 // Construct the transform gizmo
 const transformGizmo = Utils.ConstructGizmos();
-transformGizmo.visible = false;
-scene.add(transformGizmo)
 
 //#endregion
 
@@ -297,7 +297,7 @@ document.getElementById("canvas").onclick = (event) => {
                 enable the transform gizmo and 
                 move it to the selected object.
             */
-            transformGizmo.visible = true;
+            scene.add(transformGizmo)
             transformGizmo.position.set(...clickedObject.position);
         } else {
             /*
@@ -305,7 +305,10 @@ document.getElementById("canvas").onclick = (event) => {
                 if a non-user created scene object is clicked, 
                 for example the the transform gizmo itself.
             */
-            transformGizmo.visible = false;
+            // Hide the transform gizmo
+            try {
+                scene.remove(transformGizmo);
+            } finally {}
         }
 
     } else {
@@ -313,7 +316,9 @@ document.getElementById("canvas").onclick = (event) => {
         outlinePass.selectedObjects = [];
 
         // Hide the transform gizmo
-        transformGizmo.visible = false;
+        try {
+            scene.remove(transformGizmo);
+        } finally {}
     }
 }
 

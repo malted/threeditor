@@ -1,0 +1,48 @@
+@use "index"
+
+#code-panel
+	position: absolute
+
+	right: 0
+	top: 0
+	bottom: 0
+	padding: index.$panel-padding
+	width: 10%
+	max-width: 90%
+	overflow: auto
+
+	background-color: index.$codeview-bg
+
+	#bar
+		position: fixed
+		z-index: 2
+		height: 100.3vh
+		width: 23px
+		margin-left: -31px
+		$margin: -10px
+		margin-top: $margin
+		margin-bottom: $margin
+
+		border-radius: index.$panel-radius 0 0 index.$panel-radius
+		background-color: index.$panel-bg
+
+		#drag-indicator
+			position: absolute
+			
+			top: 50%
+			margin: 0
+			padding: 0
+
+			content: url("../../assets/drag-indicator.svg")
+
+	#code-display-parent
+		position: absolute
+
+		display: flex
+		flex-direction: column
+
+		top: 0
+	
+		#code-display
+			user-select: text
+			font-size: index.$codeview-font-size
