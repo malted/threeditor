@@ -207,7 +207,7 @@ const boilerplateCode = [
     `\n`      
 ];
 const importsCode = [
-    `import * as THREE from "https://cdn.skypack.dev/three"`,
+    `import * as THREE from "https://cdn.skypack.dev/three";`,
     `\n`
 ];
 
