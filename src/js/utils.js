@@ -19,7 +19,7 @@ export function ConstructGizmos() {
     const zMaterial = stalkMaterial(0x0000FF);
 
     // Stalks
-    const stalk = () => new THREE.CylinderGeometry(0.075, 0.075, stalkLength);
+    const stalk = () => new THREE.CylinderGeometry(0.05, 0.05, stalkLength);
     const xStalkGeometry = stalk();
     const yStalkGeometry = stalk();
     const zStalkGeometry = stalk();
